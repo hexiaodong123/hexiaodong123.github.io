@@ -9,7 +9,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <title>this is a web title</title>
 </head>
-
+ 
 <body>
    <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJ4LC2ZC"
@@ -20,8 +20,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h4>key1 is: <span style="color:blue;" id="key1"></span></h4>
 <h4>key2 is: <span style="color:blue;" id="key2"></span></h4>
   <script>
-    let key1Val="",key2Val="";
-    let str=window.location.search;
+    var key1Val="",key2Val="";
+    var str=window.location.search;
     str=str.replace("?","");
     let arr=str.split("&")
     if(Array.isArray(arr)){
@@ -37,4 +37,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     document.getElementById("key1").innerText=key1Val;
     document.getElementById("key2").innerText=key2Val;
   </script>
+
+  <script type="text/javascript"> (function (a, b, c, d, e, f, g) {
+    e['ire_o'] = c;
+    e[c] = e[c] || function () {
+        (e[c].a = e[c].a || []).push(arguments)
+    };
+    f = d.createElement(b);
+    g = d.getElementsByTagName(b)[0];
+    f.async = 1;
+    f.src = a;
+    g.parentNode.insertBefore(f, g);
+})('https://utt.impactcdn.com/A2788006-de3d-4011-a57c-c4737e79de0365535.js', 'script', 'ire', document, window);
+ire('identify', {customerid: key1Val , customeremail: key2Val});
+</script>
 </body>
